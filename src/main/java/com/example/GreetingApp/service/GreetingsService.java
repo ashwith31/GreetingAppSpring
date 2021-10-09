@@ -37,4 +37,8 @@ public class GreetingsService {
     public List<GreetingsEntity> getall() {
         return greetingsRepository.findAll();
     }
+
+    public String editGreeting(GreetingsEntity message) {
+        return greetingsRepository.save(message).toString();
+    }
 }

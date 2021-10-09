@@ -28,6 +28,11 @@ public class GreetingsController {
         return  greetingsService.saveGreeting(message);
     }
 
+    @PutMapping(value = "save")
+    public String editGreeting(@RequestBody GreetingsEntity message){
+        return  greetingsService.editGreeting(message);
+    }
+
     @GetMapping("/findgreet")
     public GreetingsEntity getGreetingById(@RequestParam int id) {
         return greetingsService.getGreetingById(id);
