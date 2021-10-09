@@ -42,4 +42,9 @@ public class GreetingsController {
     public List<GreetingsEntity> getallmessages(){
         return greetingsService.getall();
     }
+
+    @DeleteMapping("delete")
+    public void deleteGreeting(@RequestParam int id){
+        greetingsService.deleteGreeting(id);
+    }
 }
