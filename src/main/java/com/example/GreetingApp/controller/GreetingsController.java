@@ -25,4 +25,9 @@ public class GreetingsController {
     public String saveGreeting(@RequestBody GreetingsEntity message){
         return  greetingsService.saveGreeting(message);
     }
+
+    @GetMapping("/findgreet")
+    public GreetingsEntity getGreetingById(@RequestParam int id) {
+        return greetingsService.getGreetingById(id);
+    }
 }
